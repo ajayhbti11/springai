@@ -21,11 +21,13 @@ public class ManageRolesController {
     @GetMapping("/rolechat")
     public String chat(@RequestParam("message") String message) {
         return chatClient.prompt()
+
                 .system("""
                                 According to the company's HR policy, 
                                 employees are eligible for 18 days of paid leave annually.
                                  Unused leave can be carried over to the next year.
                                 """)
+
                 .user(message)
         .call().content();
     }
