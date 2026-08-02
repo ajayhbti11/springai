@@ -1,2 +1,4 @@
 com/springai/openai/OpenaiApplication.class
+com/springai/openai/controller/MultiModelChatAIController.class
+com/springai/openai/config/ChatClientConfig.class
 com/springai/openai/controller/OpenAIController.class

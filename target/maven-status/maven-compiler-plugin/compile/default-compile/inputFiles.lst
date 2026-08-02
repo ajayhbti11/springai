@@ -1,3 +1,5 @@
 /Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/OpenaiApplication.java
 /Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/ServletInitializer.java
+/Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/config/ChatClientConfig.java
+/Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/controller/MultiModelChatAIController.java
 /Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/controller/OpenAIController.java
