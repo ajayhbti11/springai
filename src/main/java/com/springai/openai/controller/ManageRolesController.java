@@ -11,25 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class ManageRolesController {
 
-
     private final ChatClient chatClient;
 
-    public ManageRolesController(@Qualifier("ollamaChatClient") ChatClient chatClient) {
+    public ManageRolesController(@Qualifier("roleChatClient") ChatClient chatClient) {
         this.chatClient = chatClient;
     }
 
     @GetMapping("/rolechat")
     public String chat(@RequestParam("message") String message) {
-        return chatClient.prompt()
-
-                .system("""
-                                According to the company's HR policy, 
-                                employees are eligible for 18 days of paid leave annually.
-                                 Unused leave can be carried over to the next year.
-                                """)
-
-                .user(message)
-        .call().content();
+        return chatClient.prompt(message)
+                //.user(message)
+                .call()
+                .content();
     }
 
 }
