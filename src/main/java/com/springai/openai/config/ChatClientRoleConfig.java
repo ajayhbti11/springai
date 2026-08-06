@@ -18,7 +18,6 @@ public class ChatClientRoleConfig {
                         employees are eligible for 18 days of paid leave annually.
                         Unused leave can be carried over to the next year.
                         """)
-                .defaultUser("How can I help you?")
                 .build();
     }
 }

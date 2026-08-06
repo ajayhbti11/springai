@@ -1,4 +1,10 @@
-com/springai/openai/OpenaiApplication.class
 com/springai/openai/controller/MultiModelChatAIController.class
-com/springai/openai/config/ChatClientConfig.class
+com/springai/openai/controller/PromptTemplateController.class
 com/springai/openai/controller/OpenAIController.class
+com/springai/openai/OpenaiApplication.class
+com/springai/openai/advisor/TokenUsageAuditAdvisor.class
+com/springai/openai/controller/ManageRolesController.class
+com/springai/openai/config/ChatClientConfig.class
+com/springai/openai/controller/PromptStuffingController.class
+com/springai/openai/config/ChatClientRoleConfig.class
+com/springai/openai/config/ChatClientAdvisor.class

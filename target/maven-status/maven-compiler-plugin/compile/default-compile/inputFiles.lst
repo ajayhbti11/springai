@@ -1,5 +1,11 @@
 /Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/OpenaiApplication.java
 /Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/ServletInitializer.java
+/Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/advisor/TokenUsageAuditAdvisor.java
+/Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/config/ChatClientAdvisor.java
 /Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/config/ChatClientConfig.java
+/Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/config/ChatClientRoleConfig.java
+/Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/controller/ManageRolesController.java
 /Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/controller/MultiModelChatAIController.java
 /Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/controller/OpenAIController.java
+/Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/controller/PromptStuffingController.java
+/Users/ajayraj/Documents/MyProject/openai/springai/src/main/java/com/springai/openai/controller/PromptTemplateController.java

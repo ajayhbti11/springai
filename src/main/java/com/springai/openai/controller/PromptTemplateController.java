@@ -41,5 +41,6 @@ public class PromptTemplateController {
                                  .param("customerName", customerName)
                                  .param("customerMessage", customerMessage))
                  .call().content();
+
      }
 }

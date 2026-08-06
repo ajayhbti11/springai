@@ -1,5 +1,6 @@
 package com.springai.openai.config;
 
+import java.util.concurrent.TimeUnit;
 import okhttp3.OkHttpClient;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.ollama.OllamaChatModel;
@@ -11,7 +12,6 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.http.client.OkHttp3ClientHttpRequestFactory;
 import org.springframework.web.client.RestClient;
 
-import java.util.concurrent.TimeUnit;
 
 @Configuration
 public class ChatClientConfig {
@@ -51,4 +51,5 @@ public class ChatClientConfig {
     public ChatClient ollamaAiChatClient(OllamaChatModel ollamaChatModel) {
         return ChatClient.builder(ollamaChatModel).build();
     }
+
 }
