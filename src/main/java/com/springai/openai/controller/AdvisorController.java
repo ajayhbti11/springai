@@ -3,6 +3,7 @@ package com.springai.openai.controller;
 import com.springai.openai.advisor.TokenUsageAuditAdvisor;
 import com.springai.openai.config.ChatClientAdvisor;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +16,7 @@ public class AdvisorController {
 
     private final ChatClient chatClient;
 
-    public AdvisorController(ChatClient chatClient) {
+    public AdvisorController(@Qualifier("hrAdvisorChatClient") ChatClient chatClient) {
         this.chatClient = chatClient;
     }
 
@@ -23,8 +24,10 @@ public class AdvisorController {
     @GetMapping("/chatAdvisor")
     public String chat(@RequestParam("message") String message) {
         return chatClient
+
                 .prompt()
-                .advisors(new TokenUsageAuditAdvisor())
+
+                //.advisors(new TokenUsageAuditAdvisor())
                 .system("""
                         You are an internal IT helpdesk assistant. Your role is to assist 
                         employees with IT-related issues such as resetting passwords, 

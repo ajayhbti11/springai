@@ -15,6 +15,8 @@ public class ChatClientAdvisor {
 
     @Bean("hrAdvisorChatClient")
     public ChatClient chatClient(OpenAiChatModel openAiChatModel) {
+
+        //For all Chat option near 7-8 chat option
         ChatOptions chatOptions = ChatOptions.builder().model("gpt-4.1-mini")
                 .temperature(0.8).build();
 
