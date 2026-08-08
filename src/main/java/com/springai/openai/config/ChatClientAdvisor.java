@@ -18,6 +18,10 @@ public class ChatClientAdvisor {
 
         //For all Chat option near 7-8 chat option
         ChatOptions chatOptions = ChatOptions.builder().model("gpt-4.1-mini")
+                //that will return only number of token as you set for response back to user.
+                //.maxTokens(10)
+
+                //temperature is use for your response look and feel.
                 .temperature(0.8).build();
 
         return ChatClient.builder(openAiChatModel)

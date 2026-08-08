@@ -36,6 +36,9 @@ public class PromptStuffingController {
                 //I have commented it then it will go with direct LLM
                 //.system(systemPromptTemplate)
                 .user(message)
+
+                //.call().chatClientResponse();
+                //.call().entity();
                 .call().content();
     }
 
