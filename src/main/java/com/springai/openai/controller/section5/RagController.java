@@ -9,11 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import static org.springframework.ai.chat.memory.ChatMemory.CONVERSATION_ID;
 
 @Controller
+@RequestMapping("/api/rag")
 public class RagController {
 
     private final ChatClient chatClient;
@@ -27,11 +29,13 @@ public class RagController {
     Resource hrSystemTemplate;
 
     public RagController(@Qualifier("chatMemoryChatClient") ChatClient chatClient,
-                         @Qualifier("webSearchRAGChatClient") ChatClient webSearchchatClient,
+                         @Qualifier("webSearchRAGChatClient")  ChatClient webSearchchatClient,
                          VectorStore vectorStore) {
+
         this.chatClient = chatClient;
         this.webSearchchatClient = webSearchchatClient;
         this.vectorStore = vectorStore;
+
     }
 
     @GetMapping("/random/chat")
@@ -69,6 +73,16 @@ public class RagController {
                 .call().content();
         return ResponseEntity.ok(answer);
     }
+
+//    @GetMapping("/web-search/chat")
+//    public ResponseEntity<String> webSearchChat(@RequestHeader("username")
+//                                                String username, @RequestParam("message") String message) {
+//        String answer =webSearchchatClient.prompt()
+//                .advisors(a -> a.param(CONVERSATION_ID, username))
+//                .user(message)
+//                .call().content();
+//        return ResponseEntity.ok(answer);
+//    }
 
     @GetMapping("/web-search/chat")
     public ResponseEntity<String> webSearchChat(@RequestHeader("username")

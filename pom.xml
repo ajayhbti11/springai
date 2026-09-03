@@ -96,11 +96,13 @@
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-rag</artifactId>
+			<version>${spring-ai.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-advisors-vector-store</artifactId>
+			<version>${spring-ai.version}</version>
 		</dependency>
 
 		<dependency>
@@ -111,13 +113,18 @@
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-tika-document-reader</artifactId>
+			<version>${spring-ai.version}</version>
 		</dependency>
 
-		<dependency>
+
+
+
+        <dependency>
 			<groupId>backport-util-concurrent</groupId>
 			<artifactId>backport-util-concurrent</artifactId>
 			<version>3.1</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-to-slf4j</artifactId>
@@ -133,6 +140,7 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -144,6 +152,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
 
 	<build>
 		<plugins>

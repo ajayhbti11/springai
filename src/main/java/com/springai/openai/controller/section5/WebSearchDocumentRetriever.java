@@ -7,16 +7,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.rag.Query;
-import org.springframework.ai.rag.retrieval.search.DocumentRetriever;
-import org.springframework.stereotype.Component;
-import org.springframework.util.Assert;
+import org.springframework.ai.rag.retrieval.search.DocumentRetriever;import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.client.RestClient;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
 public class WebSearchDocumentRetriever implements DocumentRetriever {
 
 
